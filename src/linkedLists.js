@@ -100,6 +100,16 @@ class LinkedList{
         return str;
     }
 
+    getKeys(){
+        let keys = [];
+        let currNode = this.listHead;
+        while(currNode != null){
+            keys.push(Object.keys(currNode.value)[0]);
+            currNode = currNode.nextNode;
+        }
+        return keys
+    }
+
     insertAt(value,index){
         let newNode = new Node(value);
         let currNode = this.listHead;
